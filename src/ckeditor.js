@@ -61,6 +61,9 @@ import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 import imageIcon from '@ckeditor/ckeditor5-core/theme/icons/image.svg';
 import linkToPageIcon from './icons/link-to-page.svg';
 
+import Tibetan from './TibetanPlugin'
+import TibetanMarkSelection from './TibetanMarkSelectionPlugin'
+
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
 /* global WIKI */
@@ -109,6 +112,30 @@ class InsertAsset extends Plugin {
 	}
 }
 
+
+class DoImage extends Plugin {
+    init() {
+      const editor = this.editor;
+
+        editor.ui.componentFactory.add( 'doImage', locale => {
+
+            const view = new ButtonView( locale );
+
+            view.set( {
+                label: 'Do image',
+                icon: imageIcon,
+                tooltip: true
+            } );
+
+            // Callback executed once the image is clicked.
+            view.on( 'execute', () => {
+            });
+
+            return view;
+        } );
+    }
+}
+
 // Plugins to include in the build.
 DecoupledEditor.builtinPlugins = [
 	Alignment,
@@ -136,7 +163,6 @@ DecoupledEditor.builtinPlugins = [
 	Italic,
 	Link,
 	LinkToPage,
-	List,
 	MediaEmbed,
 	Mention,
 	Paragraph,
@@ -160,13 +186,18 @@ DecoupledEditor.builtinPlugins = [
 	TodoList,
 	Underline,
 	UploadAdapter,
-	WordCount
+	WordCount,
+	Tibetan,
+	TibetanMarkSelection
 ];
 
 // Editor configuration.
 DecoupledEditor.defaultConfig = {
 	toolbar: {
 		items: [
+			'tibetan',
+			'tibetanMarkSelection',
+			'|',
 			'heading',
 			'|',
 			'fontsize',
