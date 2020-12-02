@@ -45,7 +45,7 @@ export default class TibetanEditing extends Plugin {
 			model: TIBETAN,
 			view: {
 				name: 'span',
-				classes: ['tibetan', 'text-big']
+				classes: ['tibetan']
 			}
 		} );
 
