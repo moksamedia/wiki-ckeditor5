@@ -46,7 +46,7 @@ export default class TibetanMarkSelectionUI extends Plugin {
 			//view.bind( 'isEnabled' ).to( command );
 
 			// Execute command.
-			this.listenTo( view, 'execute', async () => {
+			this.listenTo( view, 'execute', () => {
 
 				const selection = editor.model.document.selection;
 				let range = selection.getFirstRange();
@@ -58,32 +58,53 @@ export default class TibetanMarkSelectionUI extends Plugin {
 
 				console.log(JSON.stringify(range));
 
-				// Iterate over all items in this range:
-				for ( const value of range.getWalker() ) {
-					const item = value.item;
-					if (item.is( '$textProxy' ) || item.is('$text') || item.is( 'textProxy' ) || item.is('text')) {
-						const text = item.data;
-						const _item = item;
-						console.log("text="+text);
-						const matches = text.matchAll(tibetanRegex);
-						for (const match of matches) {
-							const matchedText = match[0];
-							const startIndex = match.index;
- 							const endIndex = match.index + match[0].length;
-							const matchLength = match[0].length;
-							console.log(`Found '${match[0]}' start=${match.index} end=${match.index + match[0].length}.`);
-							console.log(`item=${JSON.stringify(item, null, 2)}`);
-							console.log(`item.parent=${JSON.stringify(_item.parent, null, 2)}`);
-							await editor.model.change( async (writer) => {
-								let rangeTib = writer.createRangeIn(_item.parent);
-								rangeTib.start = writer.createPositionAt(_item.parent, _item.startOffset + startIndex);
-								rangeTib.end = writer.createPositionAt(_item.parent, _item.startOffset + endIndex);
+				editor.model.change( writer => {
+
+					// Iterate over all items in this range:
+					for ( const value of range.getWalker() ) {
+
+						// get the item
+						const item = value.item;
+
+						// is it a text node of some type?
+						if (item.is( '$textProxy' ) || item.is('$text') || item.is( 'textProxy' ) || item.is('text')) {
+
+							// save the item and parent in local vars
+							// - not sure why this is necessary, but they are going out of scope
+							//   if not saved locally
+							const _item = item;
+							const _parent = _item.parent;
+
+							// log the text we're matching
+							console.log("text="+_item.data);
+
+							// get the regex matches
+							const matches = _item.data.matchAll(tibetanRegex);
+
+							// iterate over the matches
+							for (const match of matches) {
+
+								// start and end indexes of match
+								const startIndex = match.index;
+								const endIndex = match.index + match[0].length;
+
+								// logging for troubleshooting
+								console.log(`Found '${match[0]}' start=${startIndex} end=${endIndex}.`);
+								console.log(`_item=${JSON.stringify(_item, null, 2)}`);
+								console.log(`_parent=${JSON.stringify(_parent, null, 2)}`);
+
+								let rangeTib = writer.createRangeIn(_parent);
+								rangeTib.start = writer.createPositionAt(_parent, _item.startOffset + startIndex);
+								rangeTib.end = writer.createPositionAt(_parent, _item.startOffset + endIndex);
 								console.log(JSON.stringify(rangeTib));
-								await writer.setAttribute( TIBETAN, true, rangeTib);
-							} );
-						  }
+								writer.setAttribute( TIBETAN, true, rangeTib);
+
+							}
+
+						}
 					}
-				}
+				});
+
 			});
 
 			return view;
