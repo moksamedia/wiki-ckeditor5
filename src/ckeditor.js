@@ -25,8 +25,8 @@ import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
-// import Indent from '@ckeditor/ckeditor5-indent/src/indent.js';
-// import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock.js';
+import Indent from '@ckeditor/ckeditor5-indent/src/indent.js';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock.js';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
@@ -157,11 +157,12 @@ DecoupledEditor.builtinPlugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
-	// Indent,
-	// IndentBlock,
+	Indent,
+	IndentBlock,
 	InsertAsset,
 	Italic,
 	Link,
+	List,
 	LinkToPage,
 	MediaEmbed,
 	Mention,
@@ -206,16 +207,12 @@ DecoupledEditor.defaultConfig = {
 			'bold',
 			'italic',
 			'underline',
-			'strikethrough',
-			'subscript',
-			'superscript',
 			'highlight',
 			'|',
 			'alignment',
 			'|',
 			'numberedList',
 			'bulletedList',
-			'todoList',
 			'|',
 			'specialCharacters',
 			'linkToPage',
