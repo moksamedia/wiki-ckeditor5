@@ -210,6 +210,8 @@ DecoupledEditor.defaultConfig = {
 			'highlight',
 			'|',
 			'alignment',
+			'outdent',
+			'indent',
 			'|',
 			'numberedList',
 			'bulletedList',
@@ -228,7 +230,8 @@ DecoupledEditor.defaultConfig = {
 			'removeFormat',
 			'|',
 			'undo',
-			'redo'
+			'redo',
+			'pasteFromOffice'
 		]
 	},
 	heading: {
