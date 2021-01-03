@@ -16,6 +16,8 @@ import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
+import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
@@ -148,6 +150,8 @@ DecoupledEditor.builtinPlugins = [
 	Essentials,
 	FontFamily,
 	FontSize,
+	FontBackgroundColor,
+	FontColor,
 	Heading,
 	Highlight,
 	HorizontalLine,
@@ -203,11 +207,14 @@ DecoupledEditor.defaultConfig = {
 			'|',
 			'fontsize',
 			'fontfamily',
+			'fontColor',
+			'fontBackgroundColor',
 			'|',
 			'bold',
 			'italic',
 			'underline',
 			'highlight',
+			'strikethrough',
 			'|',
 			'alignment',
 			'outdent',
@@ -242,7 +249,7 @@ DecoupledEditor.defaultConfig = {
 			{ model: 'heading3', view: 'h3', title: 'Heading 3', class: '' },
 			{ model: 'heading4', view: 'h4', title: 'Heading 4', class: '' },
 			{ model: 'heading5', view: 'h5', title: 'Heading 5', class: '' },
-			{ model: 'heading6', view: 'h6', title: 'Heading 6', class: '' }
+			{ model: 'heading6', view: 'h6', title: 'Heading 6', class: '' },
 		]
 	},
 	image: {
