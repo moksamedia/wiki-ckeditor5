@@ -94,8 +94,8 @@ export default class TibetanMarkSelectionUI extends Plugin {
 								console.log(`_parent=${JSON.stringify(_parent, null, 2)}`);
 
 								let rangeTib = writer.createRangeIn(_parent);
-								rangeTib.start = writer.createPositionAt(_parent, _item.startOffset + startIndex);
-								rangeTib.end = writer.createPositionAt(_parent, _item.startOffset + endIndex);
+								rangeTib.start = writer.createPositionAt(_parent, _item.offsetInText + startIndex);
+								rangeTib.end = writer.createPositionAt(_parent, _item.offsetInText + endIndex);
 								console.log(JSON.stringify(rangeTib));
 								writer.setAttribute( TIBETAN, true, rangeTib);
 
