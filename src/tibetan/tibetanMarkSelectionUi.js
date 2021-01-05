@@ -38,7 +38,7 @@ export default class TibetanMarkSelectionUI extends Plugin {
 
 			view.set( {
 				label: 'Tibetan Mark Selection',
-				tooltip: true,
+				tooltip: 'Marks all Tibetan chars within selection as Tibetan (or over entire document if no selection)',
 				icon: tibetanIcon,
 				isToggleable: false,
 			} );

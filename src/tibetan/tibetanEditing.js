@@ -49,10 +49,10 @@ export default class TibetanEditing extends Plugin {
 			}
 		} );
 
-		// Create bold command.
+		// Create tibetan command.
 		editor.commands.add( TIBETAN, new AttributeCommand( editor, TIBETAN ) );
 
 		// Set the Ctrl+B keystroke.
-		editor.keystrokes.set( 'CTRL+T', TIBETAN );
+		editor.keystrokes.set( 'CTRL+ALT+T', TIBETAN );
 	}
 }
