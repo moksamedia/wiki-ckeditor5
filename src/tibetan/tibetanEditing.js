@@ -9,6 +9,7 @@
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import AttributeCommand from '@ckeditor/ckeditor5-basic-styles/src/attributecommand'
+import inlineAutoformatEditing from '@ckeditor/ckeditor5-autoformat/src/inlineautoformatediting';
 
 const TIBETAN = 'tibetan';
 
@@ -52,7 +53,27 @@ export default class TibetanEditing extends Plugin {
 		// Create tibetan command.
 		editor.commands.add( TIBETAN, new AttributeCommand( editor, TIBETAN ) );
 
-		// Set the Ctrl+B keystroke.
+		// Set the Ctrl+ALT+T keystroke.
 		editor.keystrokes.set( 'CTRL+ALT+T', TIBETAN );
+
+		inlineAutoformatEditing( this.editor, this, /([\\{])([^*]+)([\\}])$/g,  ( writer, rangesToFormat ) => {
+
+			const command = this.editor.commands.get( TIBETAN );
+
+			if ( !command.isEnabled ) {
+				return false;
+			}
+
+			const validRanges = this.editor.model.schema.getValidRanges( rangesToFormat, TIBETAN );
+
+			for ( const range of validRanges ) {
+				writer.setAttribute( TIBETAN, true, range );
+			}
+
+			// After applying attribute to the text, remove given attribute from the selection.
+			// This way user is able to type a text without attribute used by auto formatter.
+			writer.removeSelectionAttribute( TIBETAN );
+
+		} );
 	}
 }

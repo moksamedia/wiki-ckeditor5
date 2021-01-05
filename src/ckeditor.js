@@ -147,7 +147,6 @@ DecoupledEditor.builtinPlugins = [
 	AutoImage,
 	Autoformat,
 	Autolink,
-	Autosave,
 	BlockQuote,
 	Bold,
 	Code,
@@ -251,10 +250,6 @@ DecoupledEditor.defaultConfig = {
 			'code',
 			'codeBlock',
 			'todoList',
-			'pageBreak',
-			'previousPage',
-			'nextPage',
-			'pageNavigation',
 			'subscript',
 			'superscript'
 		]

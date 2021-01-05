@@ -50,6 +50,7 @@ export default class TibetanUI extends Plugin {
 				editor.editing.view.focus();
 			});
 
+
 			/*
 			editor.model.document.registerPostFixer( writer => {
 				const changes = editor.model.document.differ.getChanges();
