@@ -138,7 +138,6 @@ class DoImage extends Plugin {
 // Plugins to include in the build.
 DecoupledEditor.builtinPlugins = [
 	Alignment,
-	AutoImage,
 	//Autoformat,
 	BlockQuote,
 	Bold,

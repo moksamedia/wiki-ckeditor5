@@ -2,75 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09c585f4-45b9-446a-bf6b-0cb10c5dec57" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ckeditor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/af.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/ast.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/az.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/de-ch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/en-au.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/en-gb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/eo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/et.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/gu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/hi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/km.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/kn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/ku.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/nb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/ne.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/no.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/oc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/pt-br.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/si.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/sl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/sq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/sr-latn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/sr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/tk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/tt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/ug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/vi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/zh-cn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/translations/zh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sample/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ckeditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tibetan/tibetanEditing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tibetan/tibetanEditing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +37,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609946975548</updated>
-      <workItem from="1609946977184" duration="568000" />
+      <workItem from="1609946977184" duration="1001000" />
     </task>
     <servers />
   </component>
