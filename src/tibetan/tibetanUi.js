@@ -50,38 +50,6 @@ export default class TibetanUI extends Plugin {
 				editor.editing.view.focus();
 			});
 
-
-			/*
-			editor.model.document.registerPostFixer( writer => {
-				const changes = editor.model.document.differ.getChanges();
-
-				for ( const entry of changes ) {
-					if ( entry.type == 'insert' && entry.name == '$text' ) {
-						console.log("entry=",entry);
-						let root = entry.position.root;
-						let path = entry.position.path;
-						let node = root.getNodeByPath(path);
-						console.log("node=",node);
-						if (path.length !== 2) return;
-						let indexOfLastChar = path[1];
-						if (!node.data || node.data.length < indexOfLastChar) return;
-						let char = node.data.charAt(indexOfLastChar);
-						console.log("char="+char);
-						if (tibetanRegex.test(char)) {
-							console.log("Tibetan!");
-							let parent = node.parent;
-							console.log("parent=",parent);
-							let rangeTib = writer.createRangeIn(parent);
-							rangeTib.start = writer.createPositionAt(parent, indexOfLastChar);
-							rangeTib.end = writer.createPositionAt(parent, indexOfLastChar+1);
-							console.log("range=",rangeTib);
-							writer.setAttribute( TIBETAN, true, rangeTib);
-						}
-					}
-				}
-			} );
-			*/
-
 			return view;
 		} );
 
