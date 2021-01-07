@@ -235,6 +235,7 @@ DecoupledEditor.defaultConfig = {
 			'horizontalLine',
 			'specialCharacters',
 			'link',
+			'linkToPage',
 			'blockQuote',
 			'imageUpload',
 			'insertTable',
