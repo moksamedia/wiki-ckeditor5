@@ -53,6 +53,7 @@
     "@ckeditor/ckeditor5-theme-lark": "^24.0.0",
     "@ckeditor/ckeditor5-typing": "^24.0.0",
     "@ckeditor/ckeditor5-word-count": "^24.0.0",
+    "ckeditor5-footnote": "^0.1.0",
     "css-loader": "^5.0.1",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
@@ -87,7 +88,5 @@
     "build/**",
     "packages/**"
   ],
-  "dependencies": {
-    "ckeditor5-footnote": "^0.1.0"
-  }
+  "dependencies": {}
 }

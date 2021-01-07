@@ -9,7 +9,6 @@ import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js';
 import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage.js';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat.js';
 import Autolink from '@ckeditor/ckeditor5-link/src/autolink.js';
-import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave.js';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code.js';
@@ -59,8 +58,6 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
-
-import Footnote from 'ckeditor5-footnote/src/footnote';
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
@@ -147,7 +144,7 @@ class DoImage extends Plugin {
 DecoupledEditor.builtinPlugins = [
 	Alignment,
 	AutoImage,
-	//Autoformat,
+	Autoformat,
 	Autolink,
 	BlockQuote,
 	Bold,
@@ -158,7 +155,6 @@ DecoupledEditor.builtinPlugins = [
 	FontColor,
 	FontFamily,
 	FontSize,
-	Footnote,
 	Heading,
 	Highlight,
 	HorizontalLine,
@@ -236,7 +232,6 @@ DecoupledEditor.defaultConfig = {
 			'indent',
 			'outdent',
 			'|',
-			'footnote',
 			'horizontalLine',
 			'specialCharacters',
 			'link',
