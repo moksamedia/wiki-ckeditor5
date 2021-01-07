@@ -56,7 +56,7 @@ export default class TibetanMarkSelectionUI extends Plugin {
 					range = editor.model.createRangeIn( editor.model.document.getRoot() );
 				}
 
-				console.log(JSON.stringify(range));
+				console.log("selected range = ", JSON.stringify(range));
 
 				editor.model.change( writer => {
 
@@ -74,6 +74,7 @@ export default class TibetanMarkSelectionUI extends Plugin {
 							//   if not saved locally
 							const _item = item;
 							const _parent = _item.parent;
+							const pathToItem = item.getPath();
 
 							// log the text we're matching
 							console.log("text="+_item.data);
@@ -91,11 +92,12 @@ export default class TibetanMarkSelectionUI extends Plugin {
 								// logging for troubleshooting
 								console.log(`Found '${match[0]}' start=${startIndex} end=${endIndex}.`);
 								console.log(`_item=${JSON.stringify(_item, null, 2)}`);
+								console.log(`pathToItem=${pathToItem.toString()}`);
 								console.log(`_parent=${JSON.stringify(_parent, null, 2)}`);
 
 								let rangeTib = writer.createRangeIn(_parent);
-								rangeTib.start = writer.createPositionAt(_parent, _item.offsetInText + startIndex);
-								rangeTib.end = writer.createPositionAt(_parent, _item.offsetInText + endIndex);
+								rangeTib.start = writer.createPositionAt(_parent, pathToItem[1] + startIndex);
+								rangeTib.end = writer.createPositionAt(_parent, pathToItem[1] + endIndex);
 								console.log(JSON.stringify(rangeTib));
 								writer.setAttribute( TIBETAN, true, rangeTib);
 
