@@ -86,5 +86,8 @@
   "eslintIgnore": [
     "build/**",
     "packages/**"
-  ]
+  ],
+  "dependencies": {
+    "ckeditor5-footnote": "^0.1.0"
+  }
 }

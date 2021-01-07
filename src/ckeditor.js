@@ -19,6 +19,7 @@ import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolo
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
+import FootNote from 'ckeditor5-footnote/src/footnote';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading.js';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
@@ -156,6 +157,7 @@ DecoupledEditor.builtinPlugins = [
 	FontColor,
 	FontFamily,
 	FontSize,
+	Footnote,
 	Heading,
 	Highlight,
 	HorizontalLine,
@@ -233,7 +235,7 @@ DecoupledEditor.defaultConfig = {
 			'indent',
 			'outdent',
 			'|',
-			'-',
+			'footnote',
 			'horizontalLine',
 			'specialCharacters',
 			'link',
