@@ -18,14 +18,6 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@ckeditor/ckeditor5-adapter-ckfinder@^24.0.0":
-  version "24.0.0"
-  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-adapter-ckfinder/-/ckeditor5-adapter-ckfinder-24.0.0.tgz#b3f08b4af5b55787a8c46720c4b42fcdc393b70c"
-  integrity sha512-F/ZeoNrhsFycoO+bYwyvwKLilBMNx5LF4a9n9ClvhdvCgrBL1svpzs/41UzlTE+neLaRPPimOqGnQRVd54qG3w==
-  dependencies:
-    "@ckeditor/ckeditor5-core" "^24.0.0"
-    "@ckeditor/ckeditor5-upload" "^24.0.0"
-
 "@ckeditor/ckeditor5-alignment@^24.0.0":
   version "24.0.0"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-alignment/-/ckeditor5-alignment-24.0.0.tgz#39caf1678f8c6b7caa96ccbc0499be094b63f876"
