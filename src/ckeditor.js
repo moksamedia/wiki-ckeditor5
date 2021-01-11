@@ -205,7 +205,7 @@ DecoupledEditor.builtinPlugins = [
 // Editor configuration.
 DecoupledEditor.defaultConfig = {
 	toolbar: {
-		shouldNotGroupWhenFull: true,
+		shouldNotGroupWhenFull: false,
 		items: [
 			'tibetan',
 			'tibetanMarkSelection',
