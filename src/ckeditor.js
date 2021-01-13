@@ -142,6 +142,54 @@ class DoImage extends Plugin {
     }
 }
 
+class Keystrokes extends Plugin {
+    init() {
+		const editor = this.editor;
+		editor.keystrokes.set( 'CTRL+ALT+1', (data, cancel) => {
+			editor.execute( 'heading', { value: 'heading1' } );
+		});
+		editor.keystrokes.set( 'CTRL+ALT+2', (data, cancel) => {
+			editor.execute( 'heading', { value: 'heading2' } );
+		});
+		editor.keystrokes.set( 'CTRL+ALT+3', (data, cancel) => {
+			editor.execute( 'heading', { value: 'heading3' } );
+		});
+		editor.keystrokes.set( 'CTRL+ALT+4', (data, cancel) => {
+			editor.execute( 'heading', { value: 'heading4' } );
+		});
+		editor.keystrokes.set( 'CTRL+ALT+Q', (data, cancel) => {
+			editor.execute( 'heading', { value: 'paragraph' } );
+		});
+		editor.keystrokes.set( 'CTRL+ALT+W', (data, cancel) => {
+			editor.execute( 'heading', { value: 'paragraph-tight' } );
+		});
+		editor.keystrokes.set( 'CTRL+ALT+E', (data, cancel) => {
+			editor.execute( 'heading', { value: 'paragraph-less-tight' } );
+		});
+		editor.keystrokes.set( ['CTRL','ALT',39], (data, cancel) => {
+			editor.execute( 'indentBlock' );
+		});
+		editor.keystrokes.set( 'CTRL+ALT+TAB', (data, cancel) => {
+			editor.execute( 'indentBlock' );
+		});
+		editor.keystrokes.set( ['CTRL','ALT',37], (data, cancel) => {
+			editor.execute( 'outdentBlock');
+		});
+		editor.keystrokes.set( 'CTRL+ALT+H', (data, cancel) => {
+			editor.execute( 'highlight', { value: 'yellowOutline' } );
+		});
+		editor.keystrokes.set( ['CTRL','ALT',37], (data, cancel) => {
+			editor.execute( 'outdentBlock');
+		});
+		/*
+		editor.editing.view.document.on( "keydown", ( eventInfo, keyEventData ) => {
+			console.log(eventInfo);
+			console.log(keyEventData);
+		});
+		*/
+	}
+}
+
 // Plugins to include in the build.
 DecoupledEditor.builtinPlugins = [
 	Alignment,
@@ -201,7 +249,8 @@ DecoupledEditor.builtinPlugins = [
 	InsertAsset,
 	LinkToPage,
 	Tibetan,
-	TibetanMarkSelection
+	TibetanMarkSelection,
+	Keystrokes
 ];
 
 // Editor configuration.
@@ -264,6 +313,18 @@ DecoupledEditor.defaultConfig = {
 					name: 'p',
 					classes: 'tighter'
 				},
+				title: 'Paragraph (tighter)',
+				class: '',
+
+				// It needs to be converted before the standard 'heading2'.
+				converterPriority: 'high'
+			},
+			{
+				model: 'paragraph-less-tight',
+				view: {
+					name: 'p',
+					classes: 'less-tighter'
+				},
 				title: 'Paragraph (tight)',
 				class: '',
 
@@ -316,5 +377,6 @@ DecoupledEditor.defaultConfig = {
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
+
 
 export default DecoupledEditor;
