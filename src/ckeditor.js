@@ -68,6 +68,8 @@ import linkToPageIcon from './icons/link-to-page.svg';
 import Tibetan from './TibetanPlugin'
 import TibetanMarkSelection from './TibetanMarkSelectionPlugin'
 
+import './custom.css';
+
 class DecoupledEditor extends DecoupledDocumentEditor {}
 
 /* global WIKI */
@@ -297,6 +299,18 @@ DecoupledEditor.defaultConfig = {
 			'mergeTableCells',
 			'tableCellProperties',
 			'tableProperties'
+		]
+	},
+	highlight: {
+		options: [
+			{ model: 'yellowOutline', class: 'marker-outline-yellow', title: 'Yellow Outline', color: 'transparent', type: 'marker' },
+			{ model: 'yellowMarker', class: 'marker-yellow', title: 'Yellow Marker', color: 'var(--ck-highlight-marker-yellow)', type: 'marker' },
+			{ model: 'greenMarker', class: 'marker-green', title: 'Green marker', color: 'var(--ck-highlight-marker-green)', type: 'marker' },
+			{ model: 'pinkMarker', class: 'marker-pink', title: 'Pink marker', color: 'var(--ck-highlight-marker-pink)', type: 'marker' },
+			{ model: 'blueMarker', class: 'marker-blue', title: 'Blue marker', color: 'var(--ck-highlight-marker-blue)', type: 'marker' },
+			{ model: 'redPen', class: 'pen-red', title: 'Red pen', color: 'var(--ck-highlight-pen-red)', type: 'pen' },
+			{ model: 'greenPen', class: 'pen-green', title: 'Green pen', color: 'var(--ck-highlight-pen-green)', type: 'pen' }
+
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
