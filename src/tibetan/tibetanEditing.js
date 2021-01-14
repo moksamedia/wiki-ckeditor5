@@ -60,22 +60,6 @@ export default class TibetanEditing extends Plugin {
 			editor.execute( 'heading', { value: 'heading1' } );
 		});
 
-		editor.keystrokes.set( 'CTRL+ALT+2', (data, cancel) => {
-			editor.execute( 'heading', { value: 'heading2' } );
-		});
-		editor.keystrokes.set( 'CTRL+ALT+3', (data, cancel) => {
-			editor.execute( 'heading', { value: 'heading3' } );
-		});
-		editor.keystrokes.set( 'CTRL+ALT+4', (data, cancel) => {
-			editor.execute( 'heading', { value: 'heading4' } );
-		});
-		editor.keystrokes.set( 'CTRL+ALT+F1', (data, cancel) => {
-			editor.execute( 'heading', { value: 'paragraph' } );
-		});
-		editor.keystrokes.set( 'CTRL+ALT+F2', (data, cancel) => {
-			editor.execute( 'heading', { value: 'paragraphTight' } );
-		});
-
 
 		/*
 		inlineAutoformatEditing( this.editor, this, /([\\{])([^*]+)([\\}])$/g,  ( writer, rangesToFormat ) => {

@@ -313,7 +313,7 @@ DecoupledEditor.defaultConfig = {
 					name: 'p',
 					classes: 'tighter'
 				},
-				title: 'Paragraph (tighter)',
+				title: 'Paragraph (tight)',
 				class: '',
 
 				// It needs to be converted before the standard 'heading2'.
@@ -325,7 +325,7 @@ DecoupledEditor.defaultConfig = {
 					name: 'p',
 					classes: 'less-tighter'
 				},
-				title: 'Paragraph (tight)',
+				title: 'Paragraph (less tight)',
 				class: '',
 
 				// It needs to be converted before the standard 'heading2'.
@@ -337,6 +337,24 @@ DecoupledEditor.defaultConfig = {
 			{ model: 'heading4', view: 'h4', title: 'Heading 4', class: '' },
 			{ model: 'heading5', view: 'h5', title: 'Heading 5', class: '' },
 			{ model: 'heading6', view: 'h6', title: 'Heading 6', class: '' },
+			{
+				model: 'big-but-not-header',
+				view: {
+					name: 'p',
+					classes: 'big-not-headers'
+				},
+				title: 'Big Not Header',
+				class: '',
+			},
+			{
+				model: 'click-to-show',
+				view: {
+					name: 'p',
+					classes: 'click-to-show'
+				},
+				title: 'Click To Show',
+				class: '',
+			},
 		]
 	},
 	image: {
