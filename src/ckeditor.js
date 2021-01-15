@@ -67,6 +67,7 @@ import linkToPageIcon from './icons/link-to-page.svg';
 
 import Tibetan from './TibetanPlugin'
 import TibetanMarkSelection from './TibetanMarkSelectionPlugin'
+import LineHeight from 'ckeditor5-line-height-plugin/src/lineheight';
 
 import './custom.css';
 
@@ -250,7 +251,8 @@ DecoupledEditor.builtinPlugins = [
 	LinkToPage,
 	Tibetan,
 	TibetanMarkSelection,
-	Keystrokes
+	Keystrokes,
+	LineHeight
 ];
 
 // Editor configuration.
@@ -267,7 +269,7 @@ DecoupledEditor.defaultConfig = {
 			'fontFamily',
 			'fontColor',
 			'fontBackgroundColor',
-			'removeFormat',
+			'lineHeight',
 			'|',
 			'bold',
 			'italic',
@@ -284,6 +286,7 @@ DecoupledEditor.defaultConfig = {
 			'outdent',
 			'|',
 			'horizontalLine',
+			'removeFormat',
 			'specialCharacters',
 			'link',
 			'linkToPage',
@@ -303,6 +306,9 @@ DecoupledEditor.defaultConfig = {
 			'subscript',
 			'superscript'
 		]
+	},
+	lineHeight: {
+		options: [ 0.5, 0.75, 1, 1.25, 1.5, 2, 2.5 ]
 	},
 	heading: {
 		options: [
