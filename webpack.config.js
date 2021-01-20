@@ -30,6 +30,7 @@ module.exports = {
 	},
 
 	optimization: {
+		/*
 		minimizer: [
 			new TerserWebpackPlugin( {
 				sourceMap: true,
@@ -42,6 +43,7 @@ module.exports = {
 				extractComments: false
 			} )
 		]
+		*/
 	},
 
 	plugins: [

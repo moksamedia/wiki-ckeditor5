@@ -99,7 +99,12 @@ export default class TibetanMarkSelectionUI extends Plugin {
 								rangeTib.start = writer.createPositionAt(_parent, pathToItem[1] + startIndex);
 								rangeTib.end = writer.createPositionAt(_parent, pathToItem[1] + endIndex);
 								console.log(JSON.stringify(rangeTib));
-								writer.setAttribute( TIBETAN, true, rangeTib);
+								if (rangeTib.isFlat) {
+									writer.setAttribute( TIBETAN, true, rangeTib);
+								}
+								else {
+									console.log("Skipping, range not flat...");
+								}
 
 							}
 
