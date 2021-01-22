@@ -10,6 +10,9 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import AttributeCommand from '@ckeditor/ckeditor5-basic-styles/src/attributecommand'
 //import inlineAutoformatEditing from '@ckeditor/ckeditor5-autoformat/src/inlineautoformatediting';
+import Command from '@ckeditor/ckeditor5-core/src/command';
+
+import {executeFunction} from './tibetanMarkSelectionUi'
 
 const TIBETAN = 'tibetan';
 
@@ -21,6 +24,49 @@ const TIBETAN = 'tibetan';
  *
  * @extends module:core/plugin~Plugin
  */
+
+class MyCommand extends Command {
+
+	constructor( editor ) {
+		super( editor );
+		this.attributeCommand = new AttributeCommand( this.editor, TIBETAN );
+	}
+    execute() {
+
+		const selection = this.editor.model.document.selection;
+
+		console.log("anchor = ", JSON.stringify(selection.anchor));
+		console.log("focus = ", JSON.stringify(selection.focus));
+		console.log("isCollapsed = " + selection.isCollapsed);
+
+			if (selection.anchor.isEqual(selection.focus)) {
+			// Create a range spanning over the entire root content:
+			//range = editor.model.createRangeIn( editor.model.document.getRoot() );
+			//range = this.editor.model.createRangeIn( selection.focus.parent );
+				/*
+			let newAnchor = selection.anchor.clone();
+			newAnchor.offset = 0;
+			let textNode = selection.anchor.textNode;
+			console.log("textNode = ", textNode);
+			if (!textNode) return;
+			let newFocus = selection.focus.clone();
+			newFocus.offset = textNode.endOffset;
+            */
+			this.editor.model.change( writer => {
+				const rangeParent = this.editor.model.createRangeIn( selection.focus.parent );
+				//const range = writer.createRange( newAnchor, newFocus );
+				writer.setSelection( rangeParent );
+				executeFunction(this.editor);
+			} );
+
+			return;
+
+		}
+
+		this.attributeCommand.execute();
+    }
+}
+
 export default class TibetanEditing extends Plugin {
 	/**
 	 * @inheritDoc
@@ -51,15 +97,10 @@ export default class TibetanEditing extends Plugin {
 		} );
 
 		// Create tibetan command.
-		editor.commands.add( TIBETAN, new AttributeCommand( editor, TIBETAN ) );
+		editor.commands.add( TIBETAN, new MyCommand(editor));
 
 		// Set the Ctrl+ALT+T keystroke.
 		editor.keystrokes.set( 'CTRL+ALT+T', TIBETAN );
-
-		editor.keystrokes.set( 'CTRL+ALT+1', (data, cancel) => {
-			editor.execute( 'heading', { value: 'heading1' } );
-		});
-
 
 		/*
 		inlineAutoformatEditing( this.editor, this, /([\\{])([^*]+)([\\}])$/g,  ( writer, rangesToFormat ) => {
