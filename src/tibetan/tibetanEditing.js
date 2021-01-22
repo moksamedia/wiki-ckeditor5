@@ -55,9 +55,11 @@ class MyCommand extends Command {
 			this.editor.model.change( writer => {
 				const rangeParent = this.editor.model.createRangeIn( selection.focus.parent );
 				//const range = writer.createRange( newAnchor, newFocus );
-				writer.setSelection( rangeParent );
-				executeFunction(this.editor);
-			} );
+				editor.model.change( writer => {
+					writer.setSelection( rangeParent );
+					executeFunction(this.editor);
+				});
+			});
 
 			return;
 
