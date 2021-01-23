@@ -18,9 +18,11 @@ class TibetanMarkSelectionCommand extends Command {
 
 	constructor( editor ) {
 		super( editor );
+		this.editor = editor;
 	}
 	execute() {
 
+		const editor = this.editor;
 		const selection = editor.model.document.selection;
 		let range = selection.getFirstRange();
 
