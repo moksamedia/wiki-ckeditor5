@@ -103,7 +103,7 @@ export default class TibetanEditing extends Plugin {
 	init() {
 		const editor = this.editor;
 		editor.commands.add( TIBETAN_MARK_SELECTION, new TibetanMarkSelectionCommand(editor));
-		this.editor.keystrokes.set( 'CTRL+SHIFT+ALT+T', TIBETAN_MARK_SELECTION );
+		this.editor.keystrokes.set( 'CTRL+ALT+Y', TIBETAN_MARK_SELECTION );
 	}
 
 }

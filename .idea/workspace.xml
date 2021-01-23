@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8e6af90b-fdfa-4179-8e2c-b8c977515e31" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ckeditor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tibetan/tibetanEditing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tibetan/tibetanEditing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionEditing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionEditing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionUi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionUi.js" afterDir="false" />
     </list>
@@ -56,7 +53,7 @@
       <workItem from="1610764092857" duration="104000" />
       <workItem from="1611175869674" duration="987000" />
       <workItem from="1611180197663" duration="614000" />
-      <workItem from="1611340193857" duration="8272000" />
+      <workItem from="1611340193857" duration="8870000" />
     </task>
     <servers />
   </component>

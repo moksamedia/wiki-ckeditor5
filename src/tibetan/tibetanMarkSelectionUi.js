@@ -40,7 +40,7 @@ export default class TibetanMarkSelectionUI extends Plugin {
 				tooltip: 'Marks all Tibetan chars within selection as Tibetan (or over entire document if no selection)',
 				icon: tibetanIcon,
 				isToggleable: false,
-				keystroke: 'CTRL+SHIFT+ALT+T'
+				keystroke: 'CTRL+ALT+Y'
 			} );
 
 
