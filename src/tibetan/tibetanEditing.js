@@ -9,7 +9,7 @@
 
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import AttributeCommand from '@ckeditor/ckeditor5-basic-styles/src/attributecommand'
-//import inlineAutoformatEditing from '@ckeditor/ckeditor5-autoformat/src/inlineautoformatediting';
+import inlineAutoformatEditing from '@ckeditor/ckeditor5-autoformat/src/inlineautoformatediting';
 
 const TIBETAN = 'tibetan';
 
@@ -48,7 +48,6 @@ export default class TibetanEditing extends Plugin {
 		// Set the Ctrl+ALT+T keystroke.
 		editor.keystrokes.set( 'CTRL+ALT+T', TIBETAN );
 
-		/*
 		inlineAutoformatEditing( this.editor, this, /([\\{])([^*]+)([\\}])$/g,  ( writer, rangesToFormat ) => {
 
 			const command = this.editor.commands.get( TIBETAN );
@@ -68,6 +67,5 @@ export default class TibetanEditing extends Plugin {
 			writer.removeSelectionAttribute( TIBETAN );
 
 		} );
-		*/
 	}
 }
