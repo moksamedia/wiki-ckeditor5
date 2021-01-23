@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e6af90b-fdfa-4179-8e2c-b8c977515e31" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/NoColorPlugin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tibetan/noColorEditing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tibetan/noColorUi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionEditing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionEditing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionUi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionUi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ckeditor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ckeditor.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/tibetan" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -41,6 +45,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/tibetan" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -53,7 +63,7 @@
       <workItem from="1610764092857" duration="104000" />
       <workItem from="1611175869674" duration="987000" />
       <workItem from="1611180197663" duration="614000" />
-      <workItem from="1611340193857" duration="8870000" />
+      <workItem from="1611340193857" duration="10248000" />
     </task>
     <servers />
   </component>

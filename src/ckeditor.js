@@ -67,6 +67,7 @@ import linkToPageIcon from './icons/link-to-page.svg';
 
 import Tibetan from './TibetanPlugin'
 import TibetanMarkSelection from './TibetanMarkSelectionPlugin'
+import NoColorPlugin from "./NoColorPlugin";
 //import LineHeight from 'ckeditor5-line-height-plugin/src/lineheight';
 
 import './custom.css';
@@ -252,7 +253,7 @@ DecoupledEditor.builtinPlugins = [
 	Tibetan,
 	TibetanMarkSelection,
 	Keystrokes,
-	//LineHeight
+	NoColorPlugin
 ];
 
 // Editor configuration.
