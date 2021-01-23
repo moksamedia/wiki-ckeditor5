@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8e6af90b-fdfa-4179-8e2c-b8c977515e31" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ckeditor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tibetan/tibetanEditing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tibetan/tibetanEditing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionEditing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionEditing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionUi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tibetan/tibetanMarkSelectionUi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +16,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1n8G1G1FHlNeQntAn3L2c8qdPjm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -44,7 +56,7 @@
       <workItem from="1610764092857" duration="104000" />
       <workItem from="1611175869674" duration="987000" />
       <workItem from="1611180197663" duration="614000" />
-      <workItem from="1611340193857" duration="4205000" />
+      <workItem from="1611340193857" duration="8272000" />
     </task>
     <servers />
   </component>
