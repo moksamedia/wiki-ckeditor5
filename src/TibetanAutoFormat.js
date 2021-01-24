@@ -1,10 +1,11 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 
-import imageIcon from '@ckeditor/ckeditor5-core/theme/icons/image.svg';
+import tibetanIcon from './icons/tibetan-auto.svg'
 
 const tibetanRegex = /[\u0F00-\u0FFF]/;
 const tibetanRegexEndsInSheg = /[\u0F00-\u0FFF]+[་།]/;
+const onlyTibetanEndsInTsheg = /^[\u0F00-\u0FFF]+[་།]$/
 const tibetanSpaces = /[་།]/;
 
 export default class TibetanAutoFormat extends Plugin {
@@ -14,32 +15,38 @@ export default class TibetanAutoFormat extends Plugin {
 		this.enabled = true;
 	}
 
+	static get pluginName() {
+		return 'TibetanAutoFormat';
+	}
+
     init() {
 
         const editor = this.editor;
+		const t = editor.t;
 
-        editor.ui.componentFactory.add( 'insertImage', locale => {
-            const view = new ButtonView( locale );
+        editor.ui.componentFactory.add( 'tibetanAutoFormat', locale => {
+
+			const command = editor.commands.get( 'tibetanAutoFormat' );
+			const view = new ButtonView( locale );
 
             view.set( {
-                label: 'Tibetan AutoFormat',
-                icon: imageIcon,
-                tooltip: true
+                label: t('Tibetan AutoFormat'),
+                icon: tibetanIcon,
+                tooltip: true,
+				isToggleable: true,
+				isOn: true
             } );
 
-            // Callback executed once the image is clicked.
             view.on( 'execute', () => {
 				this.enabled = !this.enabled;
+				view.isOn = this.enabled;
+				console.log("enabled = " + this.enabled);
             } );
 
             return view;
 
         } );
-        /*
-		editor.model.document.on( 'change:data', ( evt, batch ) => {
-			console.log("evt=", evt);
-		});
-         */
+
 		const _this = this;
 		editor.model.document.on( 'change:data', ( evt, batch ) => {
 
@@ -59,6 +66,7 @@ export default class TibetanAutoFormat extends Plugin {
 			const changes = Array.from( model.document.differ.getChanges() );
 			const entry = changes[ 0 ];
 
+			/*
 			function textForChange(change) {
 				const position = change.position;
 				//console.log("change position range: ", position);
@@ -82,81 +90,72 @@ export default class TibetanAutoFormat extends Plugin {
 				//console.log("change: "+idx, change);
 				textForChange(change);
 			})
+			 */
 
-			// Typing is represented by only a single change.
 			if ( entry.type !== 'insert' || entry.name != '$text' ) {
 				return;
+			}
+
+			function getDataFromRange(range) {
+				return range.getItems().next().value.data;
+			}
+
+			function getRangeShiftedBackOneChar(range) {
+				let nextOffset = range.start.offset - 1;
+				if (nextOffset < 0) return null;
+				let nextRange = model.createRange(
+					model.createPositionAt(block, range.start.offset - 1),
+					model.createPositionAt(block, range.start.offset)
+				);
+				return nextRange;
+			}
+
+			function walkBackChars(currentRange, block, writer) {
+
+				let string = getDataFromRange(currentRange);
+
+				console.log(`${JSON.stringify(currentRange)} - "${string}"`);
+				if (tibetanRegex.test(string)) {
+					writer.setAttribute('tibetan', true, currentRange);
+				}
+				else {
+					return;
+				}
+
+				let nextRange = getRangeShiftedBackOneChar(currentRange);
+				if (nextRange == null) return;
+				return walkBackChars(nextRange, block, writer);
 			}
 
 			const focus = selection.focus;
 			const block = focus.parent;
 			const position = entry.position;
+			// make a range for the current change (may be more than 1 char bc of ligatures combining)
 			const range = model.createRange( position, model.createPositionAt( block, position.offset + entry.length) );
+			// get the string value of the current change
 			let string = range.getItems().next().value.data;
-			console.log(string);
-
-			/*
-			editor.model.change( writer => {
-				if (tibetanRegex.test(char)) {
-					writer.setAttribute('tibetan', true, range);
-				}
-				else {
-					writer.removeAttribute('tibetan', range);
-				}
-			} );
-			 */
+			//console.log(string);
 
 
 			model.enqueueChange( batch, writer => {
 
-				if (tibetanRegexEndsInSheg.test(string)) {
-					console.log("Bam!");
+				// does the current change end in a tsheg
+				if (onlyTibetanEndsInTsheg.test(string)) {
 					let nextRange = model.createRange(
-						model.createPositionAt( block, position.offset + entry.length-1),
-						model.createPositionAt( block, position.offset + entry.length)
+						model.createPositionAt(block, range.end.offset - 1),
+						model.createPositionAt(block, range.end.offset)
 					);
-					this.walkBackChars(nextRange, block, writer);
+					walkBackChars(nextRange, block, writer);
 				}
 				else if (!tibetanRegex.test(string)) {
 					writer.removeAttribute('tibetan', range);
 				}
+
 			} );
 
-			/*
-
-			model.enqueueChange( writer => {
-				if (tibetanSpaces.test(char)) {
-					const {text, rangeToSet} = this.getTibetanText(focus, block, model);
-					console.log("text from range="+text);
-					writer.setAttribute('tibetan', true, rangeToSet);
-				}
-				else {
-					writer.removeAttribute('tibetan', range);
-				}
-			});
-
-			 */
 		} );
 
     }
-
-    walkBackChars(range, block, writer) {
-		const model = writer.model;
-		let string = range.getItems().next().value.data;
-		if (tibetanRegex.test(string)) {
-			writer.setAttribute('tibetan', true, range);
-		}
-		else {
-			return;
-		}
-		let nextOffset = range.start.offset - 1;
-		if (nextOffset < 0) return;
-		let nextRange = model.createRange(
-			model.createPositionAt( block, nextOffset),
-			model.createPositionAt( block, nextOffset+1)
-		);
-		return this.walkBackChars(nextRange, block, writer);
-	}
 
     fixedHex(number, length){
 		var str = number.toString(16).toUpperCase();
@@ -177,23 +176,5 @@ export default class TibetanAutoFormat extends Plugin {
 		}
 
 		return result;
-	}
-
-    getTibetanText( focus, block, model ) {
-		let range = model.createRange( model.createPositionAt( block, 0 ), focus );
-		let start = range.start;
-
-		const text = Array.from( range.getItems() ).reduce( ( rangeText, node ) => {
-			// Trim text to a last occurrence of an inline element and update range start.
-			if ( !( node.is( '$text' ) || node.is( '$textProxy' ) ) || tibetanRegex.test(node.data) ) {
-				start = model.createPositionAfter( node );
-
-				return '';
-			}
-
-			return rangeText + node.data;
-		}, '' );
-
-		return { text, range: model.createRange( start, range.end ) };
 	}
 }

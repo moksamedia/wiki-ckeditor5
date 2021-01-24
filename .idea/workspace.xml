@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e6af90b-fdfa-4179-8e2c-b8c977515e31" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/tibetan/wylieToUnicode.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ckeditor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TibetanAutoFormat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TibetanAutoFormat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ckeditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tibetan/tibetanEditing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tibetan/tibetanEditing.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +71,7 @@
       <workItem from="1611175869674" duration="987000" />
       <workItem from="1611180197663" duration="614000" />
       <workItem from="1611340193857" duration="21518000" />
-      <workItem from="1611455951437" duration="2976000" />
+      <workItem from="1611455951437" duration="11111000" />
     </task>
     <servers />
   </component>

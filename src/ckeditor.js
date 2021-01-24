@@ -265,6 +265,7 @@ DecoupledEditor.defaultConfig = {
 		items: [
 			'tibetan',
 			'tibetanMarkSelection',
+			'tibetanAutoFormat',
 			'|',
 			'heading',
 			'|',
@@ -296,7 +297,6 @@ DecoupledEditor.defaultConfig = {
 			'imageUpload',
 			'insertTable',
 			'htmlEmbed',
-			'mediaEmbed',
 			'imageInsert',
 			'|',
 			'undo',
