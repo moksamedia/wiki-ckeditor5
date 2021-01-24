@@ -77,7 +77,7 @@
     "url": "https://github.com/Requarks/wiki-ckeditor5.git"
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack --mode development",
     "lint": "eslint --quiet '**/*.js'"
   },
   "lint-staged": {
