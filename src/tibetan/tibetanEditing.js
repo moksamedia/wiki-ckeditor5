@@ -59,6 +59,7 @@ export default class TibetanEditing extends Plugin {
 		// Set the Ctrl+ALT+T keystroke.
 		editor.keystrokes.set( 'CTRL+ALT+T', TIBETAN );
 
+		/*
 		inlineAutoformatEditing( this.editor, this, /([\\{])([^*]+)([\\}])$/g,  ( writer, rangesToFormat ) => {
 
 			const command = this.editor.commands.get( TIBETAN );
@@ -81,5 +82,6 @@ export default class TibetanEditing extends Plugin {
 			writer.removeSelectionAttribute( TIBETAN );
 
 		} );
+		 */
 	}
 }

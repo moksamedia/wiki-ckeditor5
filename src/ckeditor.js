@@ -68,7 +68,7 @@ import linkToPageIcon from './icons/link-to-page.svg';
 import Tibetan from './TibetanPlugin'
 import TibetanMarkSelection from './TibetanMarkSelectionPlugin'
 import NoColorPlugin from "./NoColorPlugin";
-import TibetanAutoFormat from './TibetanAutoFormat'
+//import TibetanAutoFormat from './TibetanAutoFormat'
 //import LineHeight from 'ckeditor5-line-height-plugin/src/lineheight';
 
 import './custom.css';
