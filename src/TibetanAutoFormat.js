@@ -47,6 +47,7 @@ export default class TibetanAutoFormat extends Plugin {
 
         } );
 
+
 		const _this = this;
 		editor.model.document.on( 'change:data', ( evt, batch ) => {
 

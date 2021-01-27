@@ -255,7 +255,7 @@ DecoupledEditor.builtinPlugins = [
 	TibetanMarkSelection,
 	Keystrokes,
 	NoColorPlugin,
-	TibetanAutoFormat
+	//TibetanAutoFormat
 ];
 
 // Editor configuration.
@@ -265,7 +265,7 @@ DecoupledEditor.defaultConfig = {
 		items: [
 			'tibetan',
 			'tibetanMarkSelection',
-			'tibetanAutoFormat',
+			//'tibetanAutoFormat',
 			'|',
 			'heading',
 			'|',
