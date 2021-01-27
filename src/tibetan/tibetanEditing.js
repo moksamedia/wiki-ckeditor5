@@ -10,19 +10,8 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import AttributeCommand from '@ckeditor/ckeditor5-basic-styles/src/attributecommand'
 import inlineAutoformatEditing from '@ckeditor/ckeditor5-autoformat/src/inlineautoformatediting';
-import wylieToUnicode from "./wylieToUnicode";
 
 const TIBETAN = 'tibetan';
-
-function convertyWylieToUnicode(str) {
-	const split = str.split("\\s+");
-	const response = split.map(value => {
-		let unicode = wylieToUnicode[value];
-		if (!unicode) unicode = ".";
-		return unicode;
-	});
-	return response;
-}
 
 export default class TibetanEditing extends Plugin {
 	/**
