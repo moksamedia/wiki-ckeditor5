@@ -12,7 +12,7 @@ export default class TibetanAutoFormat extends Plugin {
 
 	constructor(props) {
 		super(props);
-		this.enabled = true;
+		this.enabled = false;
 	}
 
 	static get pluginName() {
@@ -34,7 +34,7 @@ export default class TibetanAutoFormat extends Plugin {
                 icon: tibetanIcon,
                 tooltip: true,
 				isToggleable: true,
-				isOn: true
+				isOn: false
             } );
 
             view.on( 'execute', () => {
@@ -50,6 +50,8 @@ export default class TibetanAutoFormat extends Plugin {
 		const _this = this;
 		editor.model.document.on( 'change:data', ( evt, batch ) => {
 
+
+			if (!this.enabled) return;
 
 			if ( batch.type == 'transparent' || !this.enabled ) {
 				return;
