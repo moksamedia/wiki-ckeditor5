@@ -7,6 +7,8 @@
  * @module basic-styles/bold/boldediting
  */
 
+import JsEwts from './jsewts';
+
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import AttributeCommand from '@ckeditor/ckeditor5-basic-styles/src/attributecommand'
 import inlineAutoformatEditing from '@ckeditor/ckeditor5-autoformat/src/inlineautoformatediting';
@@ -48,7 +50,6 @@ export default class TibetanEditing extends Plugin {
 		// Set the Ctrl+ALT+T keystroke.
 		editor.keystrokes.set( 'CTRL+ALT+T', TIBETAN );
 
-		/*
 		inlineAutoformatEditing( this.editor, this, /([\\{])([^*]+)([\\}])$/g,  ( writer, rangesToFormat ) => {
 
 			const command = this.editor.commands.get( TIBETAN );
@@ -60,10 +61,7 @@ export default class TibetanEditing extends Plugin {
 			const validRanges = this.editor.model.schema.getValidRanges( rangesToFormat, TIBETAN );
 
 			for ( const range of validRanges ) {
-				const wylie = range.getItems().next().value.data;
-				const unicode = convertyWylieToUnicode(wylie);
-				writer.remove(range);
-				writer.insertText(unicode, { tibetan: true }, range.end )
+				writer.setAttribute( TIBETAN, true, range );
 			}
 
 			// After applying attribute to the text, remove given attribute from the selection.
@@ -71,6 +69,6 @@ export default class TibetanEditing extends Plugin {
 			writer.removeSelectionAttribute( TIBETAN );
 
 		} );
-		 */
+
 	}
 }
