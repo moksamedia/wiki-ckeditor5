@@ -100,7 +100,7 @@ export default function inlineAutoformatEditing( editor, plugin, testRegexpOrCal
 					const unicode = JsEwts.toUnicode(textWithSpaces);
 					console.log("unicode", unicode);
 					writer.remove( rangeToFormat );
-					writer.insertText(unicode, {tibetan: true}, rangeToFormat.start.nodeBefore, 'after');
+					writer.insertText(unicode, {tibetan: true}, rangeToFormat.start.parent, rangeToFormat.start.offset);
 				}
 				catch (err) {
 					console.log(err);
