@@ -6,9 +6,9 @@
 // The editor creator to use.
 import DecoupledDocumentEditor from '@ckeditor/ckeditor5-editor-decoupled/src/decouplededitor.js';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js';
-import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage.js';
+//import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage.js';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat.js';
-import Autolink from '@ckeditor/ckeditor5-link/src/autolink.js';
+//import Autolink from '@ckeditor/ckeditor5-link/src/autolink.js';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code.js';
@@ -24,7 +24,6 @@ import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalli
 import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed.js';
 import Image from '@ckeditor/ckeditor5-image/src/image.js';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
-import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle.js';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar.js';
@@ -70,6 +69,9 @@ import TibetanMarkSelection from './TibetanMarkSelectionPlugin'
 import NoColorPlugin from "./NoColorPlugin";
 //import TibetanAutoFormat from './TibetanAutoFormat'
 //import LineHeight from 'ckeditor5-line-height-plugin/src/lineheight';
+
+//import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
+//import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
 
 import './custom.css';
 
@@ -196,9 +198,9 @@ class Keystrokes extends Plugin {
 // Plugins to include in the build.
 DecoupledEditor.builtinPlugins = [
 	Alignment,
-	AutoImage,
+	//AutoImage,
 	Autoformat,
-	Autolink,
+	//Autolink,
 	BlockQuote,
 	Bold,
 	Code,
@@ -214,7 +216,7 @@ DecoupledEditor.builtinPlugins = [
 	HtmlEmbed,
 	Image,
 	ImageCaption,
-	ImageInsert,
+	//ImageInsert,
 	ImageResize,
 	ImageStyle,
 	ImageToolbar,
@@ -224,9 +226,9 @@ DecoupledEditor.builtinPlugins = [
 	Italic,
 	Link,
 	List,
-	ListStyle,
+	//ListStyle,
 	MediaEmbed,
-	MediaEmbedToolbar,
+	//MediaEmbedToolbar,
 	Paragraph,
 	PasteFromOffice,
 	RemoveFormat,
@@ -248,8 +250,10 @@ DecoupledEditor.builtinPlugins = [
 	TodoList,
 	Underline,
 	WordCount,
-
+	//UploadAdapter,
+	//CKFinder,
 	InsertAsset,
+
 	LinkToPage,
 	Tibetan,
 	TibetanMarkSelection,
@@ -294,10 +298,9 @@ DecoupledEditor.defaultConfig = {
 			'link',
 			'linkToPage',
 			'blockQuote',
-			'imageUpload',
-			'insertTable',
+			//'imageUpload',
+			'insertAsset',
 			'htmlEmbed',
-			'imageInsert',
 			'|',
 			'undo',
 			'redo',

@@ -12,6 +12,7 @@ import JsEwts from './jsewts';
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import AttributeCommand from '@ckeditor/ckeditor5-basic-styles/src/attributecommand'
 import inlineAutoformatEditing from '@ckeditor/ckeditor5-autoformat/src/inlineautoformatediting';
+import wylieAutoformat from './wylieAutoformat';
 
 const TIBETAN = 'tibetan';
 
@@ -49,6 +50,8 @@ export default class TibetanEditing extends Plugin {
 
 		// Set the Ctrl+ALT+T keystroke.
 		editor.keystrokes.set( 'CTRL+ALT+T', TIBETAN );
+
+		wylieAutoformat(this.editor, this, /(\/\/)([^*]+)(\/\/)$/g, () => {});
 
 		inlineAutoformatEditing( this.editor, this, /([\\{])([^*]+)([\\}])$/g,  ( writer, rangesToFormat ) => {
 
