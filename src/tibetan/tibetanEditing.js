@@ -51,7 +51,7 @@ export default class TibetanEditing extends Plugin {
 		// Set the Ctrl+ALT+T keystroke.
 		editor.keystrokes.set( 'CTRL+ALT+T', TIBETAN );
 
-		wylieAutoformat(this.editor, this, /(\/\/)([^*]+)(\/\/)$/g, () => {});
+		wylieAutoformat(this.editor, this, /(,,)([^*]+)(,,)$/g, () => {});
 
 		inlineAutoformatEditing( this.editor, this, /([\\{])([^*]+)([\\}])$/g,  ( writer, rangesToFormat ) => {
 
