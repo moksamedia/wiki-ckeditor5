@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8e6af90b-fdfa-4179-8e2c-b8c977515e31" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tibetan/wylieAutoformat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tibetan/wylieAutoformat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ckeditor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/ckeditor.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TibetanAutoFormat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TibetanAutoFormat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ckeditor.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +74,10 @@
       <workItem from="1611633618854" duration="7000" />
       <workItem from="1611790201554" duration="3501000" />
       <workItem from="1611852382747" duration="2923000" />
-      <workItem from="1611868989632" duration="2871000" />
+      <workItem from="1611868989632" duration="3524000" />
+      <workItem from="1611943630688" duration="4000" />
+      <workItem from="1612054074673" duration="9000" />
+      <workItem from="1612054716161" duration="134000" />
     </task>
     <servers />
   </component>

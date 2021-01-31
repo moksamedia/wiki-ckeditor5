@@ -69,7 +69,6 @@ export default class TibetanAutoFormat extends Plugin {
 			const changes = Array.from( model.document.differ.getChanges() );
 			const entry = changes[ 0 ];
 
-			/*
 			function textForChange(change) {
 				const position = change.position;
 				//console.log("change position range: ", position);
@@ -93,7 +92,6 @@ export default class TibetanAutoFormat extends Plugin {
 				//console.log("change: "+idx, change);
 				textForChange(change);
 			})
-			 */
 
 			if ( entry.type !== 'insert' || entry.name != '$text' ) {
 				return;
