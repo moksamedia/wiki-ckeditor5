@@ -7,3 +7,7 @@ mark.marker-outline-yellow {
 	padding: 5px 4px;
 	margin: 0px 4px;
 }
+
+.ck.ck-button.ck-on, a.ck.ck-button.ck-on {
+	background: #a0a0a0 !important;
+}
